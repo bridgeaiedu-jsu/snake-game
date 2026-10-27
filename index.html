@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스네이크 게임</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <h1>🐍 스네이크 게임</h1>
+
+    <!-- 점수 표시 -->
+    <div class="scores">
+      <div>점수 <strong id="score">0</strong></div>
+      <div>레벨 <strong id="level">1</strong></div>
+      <div>최고 점수 <strong id="high-score">0</strong></div>
+    </div>
+
+    <canvas id="board" width="400" height="400"></canvas>
+
+    <!-- 난이도 선택 (값은 이동 간격 ms) -->
+    <div class="options">
+      <label for="difficulty">난이도</label>
+      <select id="difficulty">
+        <option value="200">쉬움 (200ms)</option>
+        <option value="150" selected>보통 (150ms)</option>
+        <option value="100">어려움 (100ms)</option>
+        <option value="50">매우 어려움 (50ms)</option>
+      </select>
+    </div>
+
+    <!-- 시작 / 일시정지 / 다시 시작 버튼 -->
+    <button type="button" id="start-btn">게임 시작</button>
+    <button type="button" id="pause-btn" hidden>일시정지</button>
+    <button type="button" id="restart-btn" hidden>다시 시작</button>
+
+    <!-- 소리 켜기 / 끄기 -->
+    <button type="button" id="sound-btn" class="sound-btn">🔊 소리 켜짐</button>
+
+    <p class="hint">방향키로 뱀을 조종하세요</p>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
